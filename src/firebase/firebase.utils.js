@@ -3,16 +3,16 @@ import 'firebase/auth';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-	apiKey: 'AIzaSyC4qbgDA2MRJW8AzQgjTUd1lWiNB0dcmKY',
-	authDomain: 'crwn-db-8f19f.firebaseapp.com',
-	databaseURL: 'https://crwn-db-8f19f.firebaseio.com',
-	projectId: 'crwn-db-8f19f',
-	storageBucket: 'crwn-db-8f19f.appspot.com',
-	messagingSenderId: '252594700782',
-	appId: '1:252594700782:web:da47a2f956b05642bf8eff',
-	// measurementId: 'G-PXB8TW1TJ1',
+	apiKey: 'AIzaSyBVWaQElMwzqmWx17dLLln_YrvdSSa9IIE',
+	authDomain: 'crwn-db-b3011.firebaseapp.com',
+	projectId: 'crwn-db-b3011',
+	storageBucket: 'crwn-db-b3011.appspot.com',
+	messagingSenderId: '1027735256487',
+	appId: '1:1027735256487:web:d62c76f2f011c193958a82',
+	// measurementId: 'G-75CWPR2190',
 };
 
+console.log('Firebase initialisation…');
 firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
