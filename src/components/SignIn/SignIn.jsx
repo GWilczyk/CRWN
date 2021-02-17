@@ -12,9 +12,16 @@ const SignIn = () => {
 
 	const handleChange = event => {
 		const { name, value } = event.target;
-
-		name === 'email' && setEmail(state => value);
-		name === 'password' && setPassword(state => value);
+		switch (name) {
+			case 'email':
+				setEmail(state => value);
+				break;
+			case 'password':
+				setPassword(state => value);
+				break;
+			default:
+				break;
+		}
 	};
 
 	const handleSubmit = event => {
@@ -25,15 +32,13 @@ const SignIn = () => {
 
 	return (
 		<div className='SignIn'>
-			<div className='title'>
-				<h2>I already have an account</h2>
-				<span>Sign in with your email and password</span>
-			</div>
+			<h2 className='title'>I already have an account</h2>
+			<span>Sign in with your email and password</span>
 
 			<form onSubmit={() => handleSubmit}>
 				<FormInput
 					handleChange={handleChange}
-					label='email'
+					label='Email'
 					name='email'
 					type='email'
 					value={email}
@@ -41,7 +46,7 @@ const SignIn = () => {
 				/>
 				<FormInput
 					handleChange={handleChange}
-					label='password'
+					label='Password'
 					name='password'
 					type='password'
 					value={password}
