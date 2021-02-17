@@ -45,7 +45,7 @@ const SignUp = () => {
 				email,
 				password
 			);
-			await createUserProfileDocument(user, displayName);
+			await createUserProfileDocument(user, { displayName });
 
 			setDisplayName(state => '');
 			setEmail(state => '');
@@ -61,7 +61,7 @@ const SignUp = () => {
 			<h2 className='title'>I do not have an account</h2>
 			<span>Sign up with your email and password</span>
 
-			<form onSubmit={() => handleSubmit}>
+			<form onSubmit={event => handleSubmit(event)}>
 				<FormInput
 					handleChange={handleChange}
 					label='Display Name'
@@ -96,9 +96,7 @@ const SignUp = () => {
 				/>
 
 				<div className='buttons'>
-					<CustomButton type='submit' value='Submit'>
-						Sign Up
-					</CustomButton>
+					<CustomButton type='submit'>Sign Up</CustomButton>
 				</div>
 			</form>
 		</div>
